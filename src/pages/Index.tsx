@@ -5,7 +5,6 @@ import FeaturesSection from "@/components/FeaturesSection";
 import BonusSection from "@/components/BonusSection";
 import ReviewsSection from "@/components/ReviewsSection";
 import OrderSection from "@/components/OrderSection";
-import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -17,7 +16,6 @@ const Index = () => {
       <BonusSection />
       <ReviewsSection />
       <OrderSection />
-      <Footer />
     </main>
   );
 };
