@@ -315,7 +315,7 @@ const HeroSection = () => {
               <motion.img
                 src={heroTshirt}
                 alt="UR Media প্রিমিয়াম টি-শার্ট"
-                className="w-full max-w-xl mx-auto drop-shadow-2xl animate-glow"
+                className="w-full max-w-xl mx-auto rounded-3xl"
                 whileHover={{ 
                   rotateY: 10,
                   rotateX: 5,
