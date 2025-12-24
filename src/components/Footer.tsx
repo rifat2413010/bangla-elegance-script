@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Heart } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -37,22 +36,13 @@ const Footer = () => {
           </motion.div>
           
           <motion.div 
-            className="text-primary-foreground/60 text-sm text-center flex items-center gap-2"
+            className="text-primary-foreground/60 text-sm text-center"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <span>© {new Date().getFullYear()} UR Media। Made with</span>
-            <motion.span
-              animate={{ 
-                scale: [1, 1.2, 1],
-              }}
-              transition={{ duration: 1, repeat: Infinity }}
-            >
-              <Heart className="w-4 h-4 text-red-400 fill-red-400" />
-            </motion.span>
-            <span>সর্বস্বত্ব সংরক্ষিত।</span>
+            <span>© {new Date().getFullYear()} UR Media। সর্বস্বত্ব সংরক্ষিত।</span>
           </motion.div>
           
           <motion.div 
