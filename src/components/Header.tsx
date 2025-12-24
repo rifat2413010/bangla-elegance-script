@@ -21,12 +21,12 @@ const Header = () => {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4"
     >
-      <div className="bg-cream/10 backdrop-blur-xl rounded-full px-6 md:px-10 py-3.5 shadow-lg border border-cream/20">
+      <div className="bg-white/80 backdrop-blur-xl rounded-full px-6 md:px-10 py-3.5 shadow-lg border border-white/50">
         <div className="flex items-center gap-6 md:gap-10">
           {/* Logo */}
           <div className="flex items-center flex-shrink-0">
-            <span className="text-xl md:text-2xl font-bold text-cream">
-              UR <span className="text-gradient-gold">Media</span>
+            <span className="text-xl md:text-2xl font-bold text-charcoal">
+              UR <span className="text-gold-dark">Media</span>
             </span>
           </div>
 
@@ -34,19 +34,19 @@ const Header = () => {
           <nav className="hidden md:flex items-center gap-8">
             <button
               onClick={scrollToFeatures}
-              className="text-cream/80 hover:text-cream transition-colors text-sm font-medium"
+              className="text-charcoal/70 hover:text-charcoal transition-colors text-sm font-medium"
             >
               বিশেষত্ব
             </button>
             <button
               onClick={scrollToReviews}
-              className="text-cream/80 hover:text-cream transition-colors text-sm font-medium"
+              className="text-charcoal/70 hover:text-charcoal transition-colors text-sm font-medium"
             >
               রিভিউ
             </button>
             <button
               onClick={scrollToOrder}
-              className="text-cream/80 hover:text-cream transition-colors text-sm font-medium"
+              className="text-charcoal/70 hover:text-charcoal transition-colors text-sm font-medium"
             >
               অর্ডার
             </button>
