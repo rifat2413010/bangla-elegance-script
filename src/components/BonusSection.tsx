@@ -46,7 +46,7 @@ const BonusSection = () => {
   };
 
   return (
-    <section className="py-20 lg:py-32 bg-gradient-hero relative overflow-hidden">
+    <section className="py-20 lg:py-32 bg-background relative overflow-hidden">
       {/* Animated background effects */}
       <div className="absolute inset-0">
         <motion.div 
@@ -109,16 +109,16 @@ const BonusSection = () => {
             সীমিত সময়ের অফার
           </motion.span>
           <motion.h2 
-            className="text-3xl md:text-4xl font-bold text-cream mb-4"
+            className="text-3xl md:text-4xl font-bold text-foreground mb-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            বিশেষ <span className="text-shimmer">বোনাস অফার</span>
+            বিশেষ <span className="text-gradient-gold">বোনাস অফার</span>
           </motion.h2>
           <motion.p 
-            className="text-cream/70 max-w-xl mx-auto"
+            className="text-muted-foreground max-w-xl mx-auto"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -142,9 +142,9 @@ const BonusSection = () => {
               whileHover={{ 
                 y: -12,
                 scale: 1.02,
-                boxShadow: "0 25px 50px -12px rgba(0,0,0,0.3)"
+                boxShadow: "0 25px 50px -12px rgba(0,0,0,0.12)"
               }}
-              className="bg-charcoal-light/50 backdrop-blur-sm p-6 rounded-2xl border border-gold/20 cursor-pointer group relative overflow-hidden"
+              className="bg-card/80 backdrop-blur-sm p-6 rounded-2xl border border-border hover:border-gold/30 cursor-pointer group relative overflow-hidden"
             >
               {/* Shine effect on hover */}
               <motion.div 
@@ -152,7 +152,7 @@ const BonusSection = () => {
               />
               
               <motion.div 
-                className="w-12 h-12 rounded-xl bg-gold/20 flex items-center justify-center mb-4 relative z-10"
+                className="w-12 h-12 rounded-xl bg-gold/15 flex items-center justify-center mb-4 relative z-10"
                 whileHover={{ rotate: 360, scale: 1.1 }}
                 transition={{ duration: 0.5 }}
               >
@@ -166,12 +166,12 @@ const BonusSection = () => {
                 </motion.div>
               </motion.div>
               <motion.h3 
-                className="text-lg font-semibold text-cream mb-2 relative z-10"
+                className="text-lg font-semibold text-foreground mb-2 relative z-10"
                 whileHover={{ x: 5 }}
               >
                 {item.title}
               </motion.h3>
-              <p className="text-cream/60 text-sm leading-relaxed relative z-10">
+              <p className="text-muted-foreground text-sm leading-relaxed relative z-10">
                 {item.description}
               </p>
             </motion.div>
@@ -212,7 +212,7 @@ const BonusSection = () => {
             </Button>
           </motion.div>
           <motion.p 
-            className="text-cream/50 text-sm mt-4"
+            className="text-muted-foreground text-sm mt-4"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
