@@ -19,50 +19,48 @@ const Header = () => {
       initial={{ y: -30, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-4xl"
+      className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4"
     >
-      <div className="bg-charcoal/95 backdrop-blur-xl rounded-full px-4 md:px-8 py-3 shadow-elevated border border-gold/10">
-        <div className="flex items-center justify-between gap-4">
+      <div className="bg-cream/10 backdrop-blur-xl rounded-full px-6 md:px-10 py-3.5 shadow-lg border border-cream/20">
+        <div className="flex items-center gap-6 md:gap-10">
           {/* Logo */}
-          <div className="flex items-center gap-2 flex-shrink-0">
+          <div className="flex items-center flex-shrink-0">
             <span className="text-xl md:text-2xl font-bold text-cream">
               UR <span className="text-gradient-gold">Media</span>
             </span>
           </div>
 
           {/* Navigation - Hidden on mobile */}
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-8">
             <button
               onClick={scrollToFeatures}
-              className="text-cream/70 hover:text-cream transition-colors text-sm font-medium"
+              className="text-cream/80 hover:text-cream transition-colors text-sm font-medium"
             >
               বিশেষত্ব
             </button>
             <button
               onClick={scrollToReviews}
-              className="text-cream/70 hover:text-cream transition-colors text-sm font-medium"
+              className="text-cream/80 hover:text-cream transition-colors text-sm font-medium"
             >
               রিভিউ
             </button>
             <button
               onClick={scrollToOrder}
-              className="text-cream/70 hover:text-cream transition-colors text-sm font-medium"
+              className="text-cream/80 hover:text-cream transition-colors text-sm font-medium"
             >
               অর্ডার
             </button>
           </nav>
 
-          {/* CTA Buttons */}
-          <div className="flex items-center gap-3">
-            <Button 
-              variant="gold" 
-              size="sm" 
-              onClick={scrollToOrder}
-              className="rounded-full px-5"
-            >
-              Order Now
-            </Button>
-          </div>
+          {/* CTA Button */}
+          <Button 
+            variant="gold" 
+            size="sm" 
+            onClick={scrollToOrder}
+            className="rounded-full px-6"
+          >
+            Order Now
+          </Button>
         </div>
       </div>
     </motion.header>
