@@ -24,7 +24,7 @@ const reviews = [
 
 const ReviewsSection = () => {
   return (
-    <section className="py-20 lg:py-32 bg-background">
+    <section id="reviews" className="py-20 lg:py-32 bg-background">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
