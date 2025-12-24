@@ -38,9 +38,9 @@ const Header = () => {
       className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4"
     >
       <motion.div 
-        className="bg-white/80 backdrop-blur-xl rounded-full px-6 md:px-10 py-3.5 shadow-lg border border-white/50"
+        className="bg-background/70 backdrop-blur-xl rounded-full px-6 md:px-10 py-3.5 shadow-soft border border-border"
         whileHover={{ 
-          boxShadow: "0 20px 40px -15px rgba(0,0,0,0.15)",
+          boxShadow: "0 20px 40px -15px rgba(0,0,0,0.10)",
           scale: 1.01
         }}
         transition={{ duration: 0.3 }}
@@ -52,11 +52,11 @@ const Header = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="text-xl md:text-2xl font-bold text-charcoal">
+            <span className="text-xl md:text-2xl font-bold text-foreground">
               UR <motion.span 
                 className="text-gold-dark"
                 animate={{ 
-                  textShadow: ["0 0 0px hsl(35 80% 40%)", "0 0 10px hsl(35 80% 40%)", "0 0 0px hsl(35 80% 40%)"]
+                  textShadow: ["0 0 0px hsl(35 95% 40%)", "0 0 10px hsl(35 95% 40%)", "0 0 0px hsl(35 95% 40%)"]
                 }}
                 transition={{ duration: 2, repeat: Infinity }}
               >Media</motion.span>
@@ -73,7 +73,7 @@ const Header = () => {
               <motion.button
                 key={item.label}
                 onClick={item.onClick}
-                className="relative text-charcoal/70 hover:text-charcoal transition-colors text-sm font-medium py-1"
+                className="relative text-muted-foreground hover:text-foreground transition-colors text-sm font-medium py-1"
                 variants={navLinkVariants}
                 initial="initial"
                 whileHover="hover"
@@ -101,7 +101,7 @@ const Header = () => {
             >
               <motion.span
                 animate={{ 
-                  scale: [1, 1.02, 1],
+                  scale: [1, 1.02, 1]
                 }}
                 transition={{ duration: 1.5, repeat: Infinity }}
               >

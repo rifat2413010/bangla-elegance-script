@@ -47,7 +47,7 @@ const HeroSection = () => {
       {/* Premium background pattern */}
       <div className="absolute inset-0">
         {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-charcoal via-charcoal to-charcoal-light" />
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-cream to-secondary" />
         
         {/* Animated decorative circles */}
         <motion.div 
@@ -69,10 +69,10 @@ const HeroSection = () => {
         
         {/* Grid pattern overlay */}
         <div 
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0 opacity-[0.04]"
           style={{
-            backgroundImage: `linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px),
-                             linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(rgba(0,0,0,.06) 1px, transparent 1px),
+                             linear-gradient(90deg, rgba(0,0,0,.06) 1px, transparent 1px)`,
             backgroundSize: '50px 50px'
           }}
         />
@@ -143,19 +143,18 @@ const HeroSection = () => {
             
             <motion.h1 
               variants={itemVariants}
-              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] mb-6 text-foreground"
             >
               <motion.span
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-white drop-shadow-lg"
               >
                 স্টাইল যেখানে
               </motion.span>
               <br />
               <motion.span 
-                className="text-gold inline-block drop-shadow-lg"
+                className="text-gradient-gold inline-block"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.5 }}
@@ -167,7 +166,6 @@ const HeroSection = () => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.7 }}
-                className="text-white drop-shadow-lg"
               >
                 মিলে যায়
               </motion.span>
@@ -175,7 +173,7 @@ const HeroSection = () => {
             
             <motion.p 
               variants={itemVariants}
-              className="text-lg md:text-xl text-white/80 mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed"
+              className="text-lg md:text-xl text-muted-foreground mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed"
             >
               প্রিমিয়াম কাপড়ের আরাম অনুভব করুন। প্রতিদিন ব্যবহারের জন্য পারফেক্ট ফিট এবং দীর্ঘস্থায়ী কোয়ালিটি।
             </motion.p>
@@ -236,7 +234,7 @@ const HeroSection = () => {
                   {[1, 2, 3, 4].map((i) => (
                     <motion.div 
                       key={i}
-                      className="w-10 h-10 rounded-full bg-gradient-to-br from-gold/40 to-gold/20 border-2 border-charcoal flex items-center justify-center text-white text-xs font-bold"
+                      className="w-10 h-10 rounded-full bg-gradient-to-br from-gold/25 to-gold/10 border-2 border-border flex items-center justify-center text-foreground text-xs font-bold"
                       initial={{ opacity: 0, scale: 0 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 1 + i * 0.1 }}
@@ -257,18 +255,18 @@ const HeroSection = () => {
                   transition={{ delay: 1.5 }}
                 >
                   <motion.div 
-                    className="text-white font-semibold"
+                    className="text-foreground font-semibold"
                     animate={{ scale: [1, 1.05, 1] }}
                     transition={{ duration: 2, repeat: Infinity }}
                   >
                     ১০০০+
                   </motion.div>
-                  <div className="text-white/60 text-sm">সন্তুষ্ট গ্রাহক</div>
+                  <div className="text-muted-foreground text-sm">সন্তুষ্ট গ্রাহক</div>
                 </motion.div>
               </div>
-              <div className="hidden sm:block w-px h-10 bg-white/30" />
+              <div className="hidden sm:block w-px h-10 bg-border" />
               <motion.div 
-                className="flex items-center gap-3 text-white/70 text-sm"
+                className="flex items-center gap-3 text-muted-foreground text-sm"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.7 }}
@@ -357,7 +355,7 @@ const HeroSection = () => {
               animate="animate"
               whileHover="hover"
               transition={{ delay: 1.2 }}
-              className="absolute top-1/4 -right-4 lg:right-0 bg-charcoal/90 backdrop-blur-sm border border-gold/20 rounded-2xl px-4 py-3 shadow-elevated cursor-pointer animate-border-glow"
+              className="absolute top-1/4 -right-4 lg:right-0 bg-background/70 backdrop-blur-md border border-border rounded-2xl px-4 py-3 shadow-soft cursor-pointer"
             >
               <motion.div 
                 className="text-gold text-xl font-bold"
@@ -366,7 +364,7 @@ const HeroSection = () => {
               >
                 ৳৯৯০
               </motion.div>
-              <div className="text-white/70 text-xs">শুধুমাত্র</div>
+              <div className="text-muted-foreground text-xs">শুধুমাত্র</div>
             </motion.div>
 
             <motion.div
@@ -375,16 +373,16 @@ const HeroSection = () => {
               animate="animate"
               whileHover="hover"
               transition={{ delay: 1.4 }}
-              className="absolute bottom-1/4 -left-4 lg:left-0 bg-charcoal/90 backdrop-blur-sm border border-gold/20 rounded-2xl px-4 py-3 shadow-elevated cursor-pointer"
+              className="absolute bottom-1/4 -left-4 lg:left-0 bg-background/70 backdrop-blur-md border border-border rounded-2xl px-4 py-3 shadow-soft cursor-pointer"
             >
               <motion.div 
-                className="text-white text-sm font-medium"
+                className="text-foreground text-sm font-medium"
                 animate={{ opacity: [0.8, 1, 0.8] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
                 ১০০% কটন
               </motion.div>
-              <div className="text-white/60 text-xs">প্রিমিয়াম ফ্যাব্রিক</div>
+              <div className="text-muted-foreground text-xs">প্রিমিয়াম ফ্যাব্রিক</div>
             </motion.div>
           </motion.div>
         </div>
